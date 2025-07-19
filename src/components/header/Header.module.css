@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  padding: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightHeader {
+  display: flex;
+  gap: 1em;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
