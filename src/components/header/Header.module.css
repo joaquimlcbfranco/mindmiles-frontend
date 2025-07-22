@@ -1,21 +1,56 @@
+.headerWrapper {
+  width: 100%;
+  /* background-color: var(--grey); */
+  /* border-bottom: 1px solid rgba(0, 145, 255, 0.7); */
+}
+
 .header {
   display: flex;
-  padding: 1.5em;
+  padding: 1em 0.2em;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+}
+
+.leftHeader h1 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.leftHeader h1 span {
+  transition: color 0.5s ease;
+}
+
+.leftHeader h1:hover span {
+  color: rgba(0, 145, 255, 1);
 }
 
 .rightHeader {
   display: flex;
-  gap: 1em;
 }
 
 button {
   padding: 0.5em 1em;
   border: none;
-  background-color: rgb(100, 100, 100);
-  color: white;
-  border-radius: 0.2rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background: none;
+}
+
+svg {
+  fill: white;
+  transition: fill 0.2s ease;
   cursor: pointer;
+}
+
+svg:hover {
+  fill: rgba(0, 145, 255, 1);
 }
