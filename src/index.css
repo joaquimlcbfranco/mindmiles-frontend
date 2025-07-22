@@ -70,7 +70,7 @@ h6 {
 #root {
 	width: 100%;
 	font-family: 'Calibre', 'San Francisco', 'SF Pro Text', var(--default-fonts);
-	  background-image: url("./assets/blurry-gradient-haikei.png");
+	  background-image: url("./assets/background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
