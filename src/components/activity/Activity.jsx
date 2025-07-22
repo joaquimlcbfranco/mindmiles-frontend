@@ -1,31 +1,31 @@
-import style from "./Post.module.css";
+import style from "./Activity.module.css";
 
 export default function Post() {
 	return (
 		<div className={style.activityWrapper}>
 			<div className={style.activityHeader}>
-				<img src="http://placehold.co/80" alt="sample image"></img>
-				<h3>Name Surname</h3>
-				<p>Username</p>
-				<p>20/01/2025</p>
+				<img
+					className={style.image}
+					src="http://placehold.co/80"
+					alt="sample image"
+				></img>
+				<h4 className={style.name}>Name Surname</h4>
+				<p className={style.username}>Username</p>
+				<p className={style.date}>20/01/2025</p>
 			</div>
 
-			<hr></hr>
+			<hr className={style.separator}></hr>
 
 			<div className={style.activityText}>
 				<h3>Activity Title</h3>
 				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-					Cumque quos maxime voluptas, atque qui beatae doloremque
-					neque alias iste. Iste alias quae dolor tempore ipsam
-					obcaecati accusantium. Beatae, sint officia vitae nisi
-					tenetur at quam, eius eum facilis recusandae harum maxime
-					blanditiis voluptates ad! Ipsa a temporibus tempore expedita
-					officia!
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Atque sint rerum quidem provident voluptatibus in libero
+					inventore deserunt, error dolores?
 				</p>
 			</div>
 
-			<hr></hr>
+			<hr className={style.separator}></hr>
 
 			<div className={style.activityStats}>
 				<div className={style.activityTime}>
@@ -34,15 +34,26 @@ export default function Post() {
 				</div>
 				<div className={style.activityCategory}>
 					<p>Categories</p>
-					<span>
-						<p>SQL</p>
-					</span>
-					<span>
-						<p>Spring Boot</p>
-					</span>
-					<span>
-						<p>Java</p>
-					</span>
+					<div className={style.categories}>
+						<span>
+							<p>SQL</p>
+						</span>
+						<span>
+							<p>Spring Boot</p>
+						</span>
+						<span>
+							<p>Java</p>
+						</span>
+						<span>
+							<p>Java</p>
+						</span>
+						<span>
+							<p>Java</p>
+						</span>
+						<span>
+							<p>Java</p>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
