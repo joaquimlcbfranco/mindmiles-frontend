@@ -40,12 +40,10 @@ export default function Profile() {
 				</div>
 
 				<div className={style.activities}>
-          <div className={style.sort}>
-            <select>
-              <option value="latest">Sort by latest</option>
-              <option value="newest">Sort by newest</option>
-            </select>
-          </div>
+					<select className={style.sort}>
+						<option value="latest">Sort by <span>latest</span></option>
+						<option value="newest">Sort by <span>newest</span></option>
+					</select>
 					<Activity />
 					<Activity />
 					<Activity />
