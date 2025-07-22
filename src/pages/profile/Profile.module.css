@@ -83,3 +83,11 @@
 	content: ">";
 	color: var(--blue);
 }
+
+.sort {
+  width: fit-content;
+  background: none;
+  color: white;
+  border: none;
+  margin-left: auto;
+}
