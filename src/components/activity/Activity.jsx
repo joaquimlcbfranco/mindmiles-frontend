@@ -9,6 +9,7 @@ export default function Post() {
 					src="http://placehold.co/80"
 					alt="sample image"
 				></img>
+				<div className={style.userDetails}></div>
 				<h4 className={style.name}>Name Surname</h4>
 				<p className={style.username}>Username</p>
 				<p className={style.date}>20/01/2025</p>
