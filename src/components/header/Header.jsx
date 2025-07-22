@@ -5,7 +5,6 @@ export default function Header() {
 		<div className={style.headerWrapper}>
 			<header className={style.header}>
 				<div className={style.leftHeader}>
-					<h1><span>M</span>ind<span>M</span>iles</h1>
 					<button>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +16,9 @@ export default function Header() {
 							<path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
 						</svg>
 					</button>
+					<h1>
+						<span>M</span>ind<span>M</span>iles
+					</h1>
 				</div>
 				<div className={style.rightHeader}>
 					<button>
