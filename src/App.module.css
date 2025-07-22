@@ -5,10 +5,5 @@
   flex-direction: column;
   padding: 2.5em 0.5em;
   gap: 1.5em;
-  background-color: rgb(24, 27, 28);
-  background-image: url("./assets/blurry-gradient-haikei.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
