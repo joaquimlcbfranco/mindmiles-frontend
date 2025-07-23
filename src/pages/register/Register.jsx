@@ -24,14 +24,43 @@ export default function Register() {
 		}));
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-	};
+
+		if (formData.password !== formData.confirmPassword) {
+			setError("Passwords do not match");
+			return;
+		}
+
+		setError("");
+
+		const url = "http://localhost:8080/api/register";
+		try {
+			const response = await fetch(url, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (!response.ok) {
+				const errorText = await response.json();
+				setError(errorText.body.detail);
+			} else {
+				console.log("Successful registration!");
+			}
+		} catch (error) {
+			setError("A server error occured during user registrartion - " + error);
+		}
+	}
 
 	return (
 		<div className={style.content}>
 			<div className={style.formContainer}>
 				<h1>Register</h1>
+				<p className={style.note}>required fields are marked with *</p>
+				{error !== null && error !== "" && <p className={style.error}>{error}</p>}
 				<form onSubmit={handleSubmit}>
 					<div className={style.formRow}>
 						<input
@@ -40,9 +69,9 @@ export default function Register() {
 							placeholder="First Name"
 							value={formData.firstName}
 							onChange={handleChange}
-							pattern="^[A-Za-z]+$"
 							required
 						></input>
+						<p className={style.required}>*</p>
 					</div>
 					<div className={style.formRow}>
 						<input
@@ -53,6 +82,7 @@ export default function Register() {
 							onChange={handleChange}
 							required
 						></input>
+						<p className={style.required}>*</p>
 					</div>
 					<div className={style.formRow}>
 						<input
@@ -63,6 +93,7 @@ export default function Register() {
 							onChange={handleChange}
 							required
 						></input>
+						<p className={style.required}>*</p>
 					</div>
 					<div className={style.formRow}>
 						<input
@@ -83,6 +114,7 @@ export default function Register() {
 							autoComplete="off"
 							required
 						></input>
+						<p className={style.required}>*</p>
 					</div>
 					<div className={style.formRow}>
 						<input
@@ -94,6 +126,7 @@ export default function Register() {
 							autoComplete="off"
 							required
 						></input>
+						<p className={style.required}>*</p>
 					</div>
 
 					<button type="submit">Submit</button>
