@@ -1,6 +1,6 @@
 .activities {
 	width: 100%;
-	flex: 1;
+  flex: 1;
 	display: flex;
 	flex-direction: column;
 	padding: 2.5em 0.5em;
@@ -9,17 +9,16 @@
 
 .profileWrapper {
 	display: flex;
+  flex: 1;
 	flex-direction: column;
 	align-items: center;
-	margin: 1em;
 	max-width: 600px;
-	margin: 0 auto;
+  margin: 0 auto;
 	position: relative;
 }
 
 .editProfile {
 	position: absolute;
-	top: 0;
 	right: 0;
 }
 
@@ -85,9 +84,9 @@
 }
 
 .sort {
-  width: fit-content;
-  background: none;
-  color: white;
-  border: none;
-  margin-left: auto;
+	width: fit-content;
+	background: none;
+	color: white;
+	border: none;
+	margin-left: auto;
 }
