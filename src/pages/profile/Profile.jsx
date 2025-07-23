@@ -1,12 +1,11 @@
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import Activity from "../../components/activity/Activity.jsx";
+import Footer from "../../components/footer/Footer.jsx";
+import Header from "../../components/header/Header.jsx";
 import style from "./Profile.module.css";
 
 export default function Profile() {
 	return (
 		<>
-			<Header />
 			<div className={style.profileWrapper}>
 				<div className={style.profileInfo}>
 					<img
@@ -41,18 +40,15 @@ export default function Profile() {
 
 				<div className={style.activities}>
 					<select className={style.sort}>
-						<option value="latest">Sort by <span>latest</span></option>
-						<option value="newest">Sort by <span>newest</span></option>
+						<option value="latest">
+							Sort by <span>latest</span>
+						</option>
+						<option value="newest">
+							Sort by <span>newest</span>
+						</option>
 					</select>
-					<Activity />
-					<Activity />
-					<Activity />
-					<Activity />
-					<Activity />
 				</div>
 			</div>
-
-			<Footer />
 		</>
 	);
 }
