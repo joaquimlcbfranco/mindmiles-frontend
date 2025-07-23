@@ -1,0 +1,93 @@
+.content {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	padding: 2.5em 0.5em;
+	gap: 1.5em;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  max-width: 500px;
+  padding: 4em 2em;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--card-background);
+	box-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
+}
+
+.formContainer h1 {
+  font-size: 2.7rem;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+form .formRow {
+  align-self: center;
+  position: relative;
+  width: 90%;
+}
+
+.formRow .formIcon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.formRow input {
+  background: none;
+  padding: 0.7em 1em;
+  width: 100%;
+  border: none;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+  color: white;
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.formRow input:hover,
+.formRow input:focus {
+  box-shadow: 0 0 7px var(--blue);
+}
+
+form button[type="submit"] {
+  padding: 0.7em 0;
+  color: black;
+  background-color: white;
+  border-radius: 2rem;
+  width: 90%;
+  align-self: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+form button[type="submit"]:active {
+  background: rgba(255, 255, 255, 1);
+}
+
+.formContainer a {
+  text-decoration: none;
+  color: var(--blue);
+  transition: color 0.3s ease;
+}
+
+.formContainer a:hover {
+  color: rgba(0, 145, 255, 0.7)
+}
