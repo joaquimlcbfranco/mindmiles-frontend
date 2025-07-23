@@ -1,0 +1,48 @@
+.content {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5em 0.5em;
+	gap: 1.5em;
+	color: white;
+}
+
+.successWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	width: 100%;
+	max-width: 500px;
+	padding: 4em 2em;
+	text-align: center;
+	border-radius: 1rem;
+	background-color: var(--card-background);
+	box-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
+}
+
+.successWrapper h1 {
+	font-size: 2rem;
+}
+
+.successWrapper form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+}
+
+.successWrapper p {
+  font-size: 1.5rem;
+}
+
+.successWrapper a {
+	text-decoration: none;
+	color: var(--blue);
+	transition: color 0.3s ease;
+}
+
+.successWrapper a:hover {
+	color: rgba(0, 145, 255, 0.7);
+}
