@@ -27,6 +27,17 @@
   font-size: 2.7rem;
 }
 
+.formContainer .note {
+  margin-top: -2em;
+  font-size: 0.8rem;
+}
+
+.formContainer .error {
+  font-size: 0.9rem;
+  color: red;
+  font-weight: 500;
+}
+
 .formContainer form {
   display: flex;
   flex-direction: column;
@@ -39,11 +50,12 @@ form .formRow {
   width: 90%;
 }
 
-.formRow .formIcon {
+.formRow .required {
+  color: rgba(255, 255, 255, 0.5);
   position: absolute;
+  top: 0;
   right: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  padding: 0.7em 1em;
 }
 
 .formRow input {
