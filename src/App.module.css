@@ -1,1 +1,21 @@
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+.appContainer > h1 {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.appContainer a {
+  text-decoration: none;
+  color: var(--blue);
+  transition: color 0.3s ease;
+}
+
+.appContainer a:hover {
+  color: rgba(0, 145, 255, 0.7);
+}
