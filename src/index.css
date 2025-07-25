@@ -65,6 +65,7 @@ h6 {
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --card-background: rgba(0, 17, 34, 0.3);
   --blue: rgba(0, 145, 255, 1);
+	--blue-hover: rgba(0, 145, 255, 0.7);
 }
 
 #root {
