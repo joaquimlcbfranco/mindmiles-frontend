@@ -1,4 +1,5 @@
 import style from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 	return (
@@ -17,7 +18,9 @@ export default function Header() {
 						</svg>
 					</button>
 					<h1>
-						<span>M</span>ind<span>M</span>iles
+						<Link to="/">
+							<span className={style.colored}>M</span>ind<span className={style.colored}>M</span>iles
+						</Link>
 					</h1>
 				</div>
 				<div className={style.rightHeader}>

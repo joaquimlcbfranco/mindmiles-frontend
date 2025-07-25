@@ -26,11 +26,20 @@
   cursor: pointer;
 }
 
+.leftHeader a {
+  text-decoration: none;
+  color: white;
+}
+
+.leftHeader a:hover {
+  color: white;
+}
+
 .leftHeader h1 span {
   transition: color 0.5s ease;
 }
 
-.leftHeader h1:hover span {
+.leftHeader h1:hover .colored {
   color: rgba(0, 145, 255, 1);
 }
 
