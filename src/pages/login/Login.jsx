@@ -1,7 +1,10 @@
 import style from "./Login.module.css";
+import Header from "../../components/header/Header.jsx";
+import { Link } from "react-router-dom";
 
 export default function Login() {
 	return (
+		
 		<div className={style.content}>
 			<div className={style.formContainer}>
 				<h1>Login</h1>
@@ -28,6 +31,7 @@ export default function Login() {
 							type="password"
 							name="password"
 							placeholder="Password"
+							autoComplete="off"
 						></input>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +48,7 @@ export default function Login() {
 					<button type="submit">Submit</button>
 				</form>
 				<p>
-					Don't have an account? <a href="">Register</a>
+					Don't have an account? <Link to="/register">Register</Link> 
 				</p>
 			</div>
 		</div>
