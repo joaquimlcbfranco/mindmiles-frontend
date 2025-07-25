@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "./Register.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
 	const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ export default function Register() {
 		confirmPassword: "",
 	});
 	const [error, setError] = useState(null);
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -48,7 +48,8 @@ export default function Register() {
 				const errorText = await response.json();
 				setError(errorText.body.detail);
 			} else {
-				console.log("Successful registration!");
+				console.log("Successful login!");
+				navigate("/registration-success");
 			}
 		} catch (error) {
 			setError("A server error occured during user registrartion - " + error);
@@ -132,7 +133,7 @@ export default function Register() {
 					<button type="submit">Submit</button>
 				</form>
 				<p>
-					Already have an account? <a href="">Login</a>
+					Already have an account? <Link to="/login">Login</Link>
 				</p>
 			</div>
 		</div>
