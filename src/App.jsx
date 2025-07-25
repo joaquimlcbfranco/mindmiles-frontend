@@ -1,11 +1,15 @@
-import Feed from "./pages/feed/Feed.jsx";
-import Profile from "./pages/profile/Profile.jsx";
+import style from "./App.module.css";
+import Header from "./components/header/Header.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
 	return (
-		<>
-			<Profile />
-		</>
+		<div className={style.appContainer}>
+			<Header />
+			<Outlet />
+			<Footer />
+		</div>
 	);
 }
 
