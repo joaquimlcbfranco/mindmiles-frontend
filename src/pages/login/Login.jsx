@@ -1,19 +1,62 @@
 import style from "./Login.module.css";
-import Header from "../../components/header/Header.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Login() {
+	const [formData, setFormData] = useState({
+		username: "",
+		password: "",
+	});
+	const [error, setError] = useState(null);
+	const navigate = useNavigate();
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleLogin = async (e) => {
+		e.preventDefault();
+
+		setError(null);
+
+		const url = "http://localhost:8080/api/login";
+		try {
+			const response = await fetch(url, {
+				method: "POST",
+				credentials: "include",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+			console.log(response);
+
+			if (response.status !== 200) {
+				const errorText = await response.text();
+				setError(errorText);
+			} else {
+				navigate("/");
+			}
+		} catch (e) {
+			throw new Error(e);
+		}
+	};
+
 	return (
-		
 		<div className={style.content}>
 			<div className={style.formContainer}>
 				<h1>Login</h1>
-				<form>
+				{error !== null && error !== "" && <p className={style.error}>{error}</p>}
+				<form onSubmit={handleLogin}>
 					<div className={style.formRow}>
 						<input
 							type="text"
 							name="username"
 							placeholder="Username"
+							onChange={handleChange}
 						></input>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +75,7 @@ export default function Login() {
 							name="password"
 							placeholder="Password"
 							autoComplete="off"
+							onChange={handleChange}
 						></input>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +92,7 @@ export default function Login() {
 					<button type="submit">Submit</button>
 				</form>
 				<p>
-					Don't have an account? <Link to="/register">Register</Link> 
+					Don't have an account? <Link to="/register">Register</Link>
 				</p>
 			</div>
 		</div>
