@@ -32,7 +32,7 @@ export default function Register() {
 			return;
 		}
 
-		setError("");
+		setError(null);
 
 		const url = "http://localhost:8080/api/register";
 		try {
@@ -48,11 +48,10 @@ export default function Register() {
 				const errorText = await response.json();
 				setError(errorText.body.detail);
 			} else {
-				console.log("Successful login!");
 				navigate("/registration-success");
 			}
-		} catch (error) {
-			setError("A server error occured during user registrartion - " + error);
+		} catch (e) {
+			throw new Error(e);
 		}
 	}
 
