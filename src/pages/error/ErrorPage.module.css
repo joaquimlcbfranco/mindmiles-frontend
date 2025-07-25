@@ -1,0 +1,28 @@
+.errorWrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorWrapper h1 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+.errorWrapper p {
+  color: white;
+  font-weight: 500;
+}
+
+.errorWrapper a {
+  text-decoration: none;
+  color: var(--blue);
+  transition: color 0.3s ease;
+}
+
+.errorWrapper a:hover {
+  color: var(--blue-hover);
+}
